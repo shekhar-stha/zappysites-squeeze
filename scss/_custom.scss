@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Color Set */
+$primary: #064DA1;
+$secondary: #30C28C;
+$warning: #4C4637;
+$success: #a2daf0;
+$danger: #005B50;
+$black: #302c2c;
+$white: #f4f4f3;
+$creamWhite: #f7f2ed;
+$info: #808080;
+
+$container-max-widths: (
+    sm: 540px,
+    md: 750px,
+    lg: 960px,
+    xl: 1180px,
+    xxl: 1360px,
+);
+$grid-breakpoints: (
+    xs: 0,
+    vsm: 430px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+// @import "~bootstrap/scss/bootstrap";
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fs-13 {
+    font-size: 13px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-15 {
+    font-size: 15px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.fs-17 {
+    font-size: 17px;
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
+.fs-19 {
+    font-size: 19px;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.fs-21 {
+    font-size: 21px;
+}
+
+.fs-22 {
+    font-size: 22px;
+}
+
+.fs-23 {
+    font-size: 23px;
+}
+
+.fs-24 {
+    font-size: 24px;
+}
+
+.fs-28 {
+    font-size: 28px;
+}
+
+.fs-32 {
+    font-size: 32px;
+}
+
+.lh-25 {
+    line-height: 25px;
+}
+
+p {
+    margin: 0px;
+}
+
+.btn {
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+
+.btn-primary {
+    color: $white;
+    font-weight: 500;
+    border: 2px solid $primary;
+
+    &:hover {
+        color: $primary;
+        background-color: transparent;
+        border: 2px solid $primary;
+    }
+}
+
+.btn-secondary {
+    color: $white;
+    font-weight: 500;
+    border: 2px solid $secondary;
+    transition: all 1000ms;
+
+    &:hover {
+        color: $secondary;
+        background-color: transparent;
+        border: 2px solid $secondary;
+        transform: scale(1.1);
+    }
+}
+
+.btn-outline-secondary {
+    padding: 0.4em 2em;
+    border: none;
+    border-radius: 5px;
+    color: $secondary;
+    transition: all 1000ms;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid $secondary;
+
+    &:hover {
+        color: #ffffff;
+        transform: scale(1.1);
+        outline: 2px solid $secondary;
+        box-shadow: 4px 5px 17px -4px $secondary;
+
+        &::before {
+            width: 250%;
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: -50px;
+        top: 0;
+        width: 0;
+        height: 100%;
+        background-color: $secondary;
+        transform: skewX(45deg);
+        z-index: -1;
+        transition: width 1000ms;
+    }
+}
+
+
+
+.btn-warning {
+    color: $white;
+}
+
+.btn-success {
+    background-color: $success;
+    border-color: $success;
+    color: #000;
+}
+
+.btn-outline-success {
+    color: $success;
+    border-color: $success;
+}
+
+// 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none !important;
+    transition: all 0.3s ease-in;
+    scroll-behavior: smooth;
+}
+
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Playfair Display', serif;
+// font-family: 'Poppins', sans-serif;
+// font-family: 'Roboto', sans-serif;
+
+a {
+    color: #000000;
+}
+
+body {
+    background-color: #f4f4f3;
+}
+
+section {
+    overflow: hidden;
+    margin-bottom: 4.5rem;
+}
+
+.header {
+    font-size: 33px;
+    font-weight: 400;
+    position: relative;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+    color: $primary;
+
+    span{
+        font-weight: 600;
+    }
+}
+
+.sub-header {
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
