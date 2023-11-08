@@ -2,26 +2,90 @@
 
 @import "./slick";
 
-.pill-btn{
+.pill-btn {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background-color: #064DA1;
+    background-color: $primary;
     color: $white;
     text-transform: uppercase;
 
     .icon-div {
-      background-color: #E6F1FF;
-      border-radius: 50%;
-      width: 2.2rem;
-      height: 2.2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgb(36, 161, 211);
+        background-color: #E6F1FF;
+        border-radius: 50%;
+        width: 2.2rem;
+        height: 2.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(36, 161, 211);
+
+        i {
+            color: rgb(36, 161, 211);
+        }
     }
-    
+
     @media (max-width: 450px) {
         width: fit-content;
     }
-  }
+
+    &:hover {
+        background-color: #E6F1FF;
+        color: $primary;
+
+        .icon-div {
+            background-color: $primary;
+            color: #E6F1FF;
+
+            i {
+                color: #E6F1FF;
+            }
+        }
+    }
+}
+
+
+.pill-btn-opposite {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #E6F1FF;
+    color: $primary;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    .icon-div {
+        background-color: $primary;
+        border-radius: 50%;
+        width: 2.2rem;
+        height: 2.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #E6F1FF;
+
+        i {
+            color: #E6F1FF;
+        }
+    }
+
+    @media (max-width: 450px) {
+        width: fit-content;
+    }
+
+    &:hover {
+        background-color: $primary;
+        color: #E6F1FF;
+
+        .icon-div {
+            background-color: #E6F1FF;
+            color: $primary;
+
+            i {
+                color: $primary;
+            }
+        }
+    }
+
+
+}

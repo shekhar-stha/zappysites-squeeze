@@ -12991,23 +12991,6 @@ nav .navbar-brand img {
   width: 100%;
   object-fit: contain;
 }
-nav .nav-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: #064DA1;
-  color: #f4f4f3;
-}
-nav .nav-btn .icon-div {
-  background-color: #E6F1FF;
-  border-radius: 50%;
-  width: 2.2rem;
-  height: 2.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgb(36, 161, 211);
-}
 nav .nav-link {
   color: #064DA1;
   font-size: 1.2rem;
@@ -13136,10 +13119,63 @@ nav .nav-link:hover {
   justify-content: center;
   color: rgb(36, 161, 211);
 }
+.pill-btn .icon-div i {
+  color: rgb(36, 161, 211);
+}
 @media (max-width: 450px) {
   .pill-btn {
     width: fit-content;
   }
+}
+.pill-btn:hover {
+  background-color: #E6F1FF;
+  color: #064DA1;
+}
+.pill-btn:hover .icon-div {
+  background-color: #064DA1;
+  color: #E6F1FF;
+}
+.pill-btn:hover .icon-div i {
+  color: #E6F1FF;
+}
+
+.pill-btn-opposite {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #E6F1FF;
+  color: #064DA1;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.pill-btn-opposite .icon-div {
+  background-color: #064DA1;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #E6F1FF;
+}
+.pill-btn-opposite .icon-div i {
+  color: #E6F1FF;
+}
+@media (max-width: 450px) {
+  .pill-btn-opposite {
+    width: fit-content;
+  }
+}
+.pill-btn-opposite:hover {
+  background-color: #064DA1;
+  color: #E6F1FF;
+}
+.pill-btn-opposite:hover .icon-div {
+  background-color: #E6F1FF;
+  color: #064DA1;
+}
+.pill-btn-opposite:hover .icon-div i {
+  color: #064DA1;
 }
 
 .nav-hero {
