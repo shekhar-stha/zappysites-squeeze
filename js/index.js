@@ -652,4 +652,19 @@ cancelBtn.addEventListener("click", () => {
   cancelBtn.style.display = "none";
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const inputElement = document.querySelector('.form-control');
+  const savingsAmountElement = document.querySelector('.savings-amount');
+
+  inputElement.addEventListener('input', function () {
+    const monthlyBill = parseFloat(this.value);
+    if (!isNaN(monthlyBill)) {
+      const yearlySavings = (monthlyBill * 12) - 600;
+      savingsAmountElement.textContent = `$${yearlySavings.toFixed(2)}`;
+    } else {
+      savingsAmountElement.textContent = '$';
+    }
+  });
+});
+
 console.log(cancelBtn)
