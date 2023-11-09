@@ -9,7 +9,7 @@ $danger: #005B50;
 $black: #302c2c;
 $white: #f4f4f3;
 $creamWhite: #f7f2ed;
-$info: #808080;
+$info: #2A3240;
 
 $container-max-widths: (
     sm: 540px,
@@ -31,6 +31,10 @@ $grid-breakpoints: (
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 // @import "~bootstrap/scss/bootstrap";
+.fw-300 {
+    font-weight: 300;
+}
+
 .fw-400 {
     font-weight: 400;
 }
@@ -216,19 +220,19 @@ a {
 }
 
 body {
-    background-color: #f4f4f3;
+    background-color: #ffffff;
 }
 
 section {
     overflow: hidden;
-    margin-bottom: 4.5rem;
+    margin-bottom: 3rem;
 }
 
 .header {
     font-size: 33px;
     font-weight: 400;
     position: relative;
-    text-transform: capitalize;
+    text-transform: uppercase;
     margin-bottom: 2rem;
     color: $primary;
 

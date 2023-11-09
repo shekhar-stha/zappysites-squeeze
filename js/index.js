@@ -629,12 +629,27 @@ $('.testimonials-slider').slick({
   nextArrow: null,
 });
 
-const videoSection =document.querySelector(".video-section");
+const videoSection = document.querySelector(".video-section");
 const videoDiv = document.querySelector(".video-div");
 const videoBtn = document.querySelector(".play-btn");
+const playBtn = videoBtn.querySelector(".play-btn-img");
+const cancelBtn = videoBtn.querySelector(".cancel-btn");
 
 videoBtn.addEventListener("click", () => {
   videoSection.classList.add("video-start");
   videoDiv.classList.add("show-video");
-  console.log("hello")
+  videoBtn.style.backgroundColor = "red";
+  playBtn.style.display = "none";
+  cancelBtn.style.display = "block";
 });
+
+cancelBtn.addEventListener("click", () => {
+  console.log("Cancel button clicked");
+  videoSection.classList.remove("video-start");
+  videoDiv.classList.remove("show-video");
+  videoBtn.style.backgroundColor = ""; // Remove the inline style
+  playBtn.style.display = "block";
+  cancelBtn.style.display = "none";
+});
+
+console.log(cancelBtn)
