@@ -685,9 +685,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Convert the input to a number and calculate the savings
     const monthlyBillValue = parseFloat(inputValue);
-    const savingsAmount = (monthlyBillValue * 12) - 600;
+    const zappySitesAmount = 600;
+    const savingsAmount = (monthlyBillValue * 12) - zappySitesAmount;
 
-    if (savingsAmount < 0) {
+    if (savingsAmount <= 0) {
       savingsAmountElement.innerHTML = '<div class="loading-spinner"></div>';
     } else {
       savingsAmountElement.textContent = `$${savingsAmount.toFixed(2)}`;
