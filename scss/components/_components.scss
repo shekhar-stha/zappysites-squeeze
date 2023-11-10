@@ -9,15 +9,15 @@
     background-color: $primary;
     color: $white;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 20px;
     transition: all ease-in-out 0.3s;
     .icon-div {
         background-color: #E6F1FF;
         border-radius: 50%;
-        min-width: 3.2rem;
-        min-height: 3.2rem;
-        width: 3.2rem;
-        height: 3.2rem;
+        min-width: 3.6rem;
+        min-height: 3.6rem;
+        width: 3.6rem;
+        height: 3.6rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -54,14 +54,14 @@
     color: $primary;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 20px;
     .icon-div {
         background-color: $primary;
         border-radius: 50%;
-        min-width: 3.2rem;
-        min-height: 3.2rem;
-        width: 3.2rem;
-        height: 3.2rem;
+        min-width: 3.7rem;
+        min-height: 3.7rem;
+        width: 3.7rem;
+        height: 3.7rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -89,3 +89,19 @@
 
 
 }
+
+.loading-spinner {
+    border: 6px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 54px;
+    height: 54px;
+    animation: spin 1s linear infinite;
+    margin: 1.5rem auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

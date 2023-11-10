@@ -631,40 +631,83 @@ $('.testimonials-slider').slick({
 
 const videoSection = document.querySelector(".video-section");
 const videoDiv = document.querySelector(".video-div");
+const video = videoDiv.querySelector(".video");
 const videoBtn = document.querySelector(".play-btn");
 const playBtn = videoBtn.querySelector(".play-btn-img");
 const cancelBtn = videoBtn.querySelector(".cancel-btn");
 
-videoBtn.addEventListener("click", () => {
+playBtn.addEventListener("click", () => {
   videoSection.classList.add("video-start");
   videoDiv.classList.add("show-video");
   videoBtn.style.backgroundColor = "red";
   playBtn.style.display = "none";
   cancelBtn.style.display = "block";
+  video.play();
 });
 
 cancelBtn.addEventListener("click", () => {
   console.log("Cancel button clicked");
   videoSection.classList.remove("video-start");
   videoDiv.classList.remove("show-video");
-  videoBtn.style.backgroundColor = ""; // Remove the inline style
+  videoBtn.style.backgroundColor = "";
   playBtn.style.display = "block";
   cancelBtn.style.display = "none";
+  video.pause();
 });
 
+
 document.addEventListener("DOMContentLoaded", function () {
-  const inputElement = document.querySelector('.form-control');
+  const inputElement = document.querySelector('.savings-input');
   const savingsAmountElement = document.querySelector('.savings-amount');
 
   inputElement.addEventListener('input', function () {
-    const monthlyBill = parseFloat(this.value);
-    if (!isNaN(monthlyBill)) {
-      const yearlySavings = (monthlyBill * 12) - 600;
-      savingsAmountElement.textContent = `$${yearlySavings.toFixed(2)}`;
+    let inputValue = inputElement.value;
+
+    // Remove non-numeric characters (except dot) and dollar sign from the beginning
+    inputValue = inputValue.replace(/^\$/, '');
+
+    // Check if the input contains alphabets
+    function containsAnyLetters(str) {
+      return /[a-zA-Z]/.test(str);
+    }
+
+    // Check if the input is a valid number or contains alphabets
+    if (isNaN(inputValue) || inputValue.trim() === '' || containsAnyLetters(inputValue)) {
+      alert('Please enter a valid number for the monthly bill.');
+      console.log(inputValue);
+      inputElement.value = inputValue.replace(/[^0-9.]/g, '');
+      if (inputElement.value.charAt(0) !== '$') {
+        inputElement.value = '$' + inputElement.value;
+      }
+      return;
+    }
+
+    // Remove any remaining non-numeric characters (except dot)
+    inputValue = inputValue.replace(/[^0-9.]/g, '');
+
+    // Convert the input to a number and calculate the savings
+    const monthlyBillValue = parseFloat(inputValue);
+    const savingsAmount = (monthlyBillValue * 12) - 600;
+
+    if (savingsAmount < 0) {
+      savingsAmountElement.innerHTML = '<div class="loading-spinner"></div>';
     } else {
-      savingsAmountElement.textContent = '$';
+      savingsAmountElement.textContent = `$${savingsAmount.toFixed(2)}`;
     }
   });
 });
 
-console.log(cancelBtn)
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll('.hero-img');
+  let currentIndex = 0;
+
+  function showNextImage() {
+    images[currentIndex].style.opacity = 0;
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].style.opacity = 1;
+  }
+
+  setInterval(showNextImage, 10000); // Change image every 10 seconds
+});

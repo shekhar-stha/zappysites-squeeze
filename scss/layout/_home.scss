@@ -49,6 +49,7 @@
 
             @media (max-width: 768px) {
                 padding: 0rem 0rem 1rem;
+                text-align: center;
             }
 
             .first-heading {
@@ -87,7 +88,7 @@
                 text-shadow: 0 0 5px rgba(0, 0, 0, 0.34);
             }
 
-            p {
+            .fourth-heading {
                 font-size: 18px;
                 color: $white;
                 width: 100%;
@@ -105,6 +106,12 @@
 
             .hero-btns {
                 border-bottom: 2px solid #cfe5ff40;
+
+                .pill-btn {
+                    @media (max-width: 576px) {
+                        width: fit-content;
+                    }
+                }
             }
         }
 
@@ -128,6 +135,8 @@
                 overflow: visible;
                 object-fit: cover;
                 z-index: 2;
+                opacity: 0;
+                transition: opacity 2s ease-in-out;
 
                 @media (max-width: 1400px) {
                     max-height: inherit;
@@ -145,6 +154,10 @@
                     max-height: 20rem;
                 }
             }
+
+            .hero-img-1 {
+                opacity: 1;
+              }
         }
 
         .hero-testimonials {
@@ -160,6 +173,10 @@
                     align-items: center;
                     width: 100%;
                     gap: 1rem;
+
+                    @media (max-width: 768px) {
+                        justify-content: center;
+                    }
 
                     .img-div {
                         min-width: 3.9rem;
@@ -177,11 +194,16 @@
                     }
 
                     .client-details {
-                        width: 100%;
 
                         .name {
                             font-size: 15px;
                             font-weight: 600;
+                            color: $white;
+                            text-align: start;
+                        }
+
+                        .sub-data {
+                            color: $white;
                         }
 
                         .stars {
@@ -194,6 +216,7 @@
                     .testimonial-text {
                         font-style: italic;
                         font-weight: 400;
+                        color: $white;
                     }
                 }
             }
@@ -225,6 +248,11 @@
         top: 0;
         left: 0;
         background-color: $dark;
+
+        @media (max-width: 992px) {
+            width: 100%;
+            height: 35rem;
+        }
     }
 }
 
@@ -257,6 +285,12 @@
 
         video {
             display: block;
+        }
+
+        @media (max-width: 992px) {
+            width: 100%;
+            height: 35rem;
+            top: 0;
         }
     }
 
@@ -312,10 +346,6 @@
             width: 100%;
             object-fit: cover;
 
-            @media (max-width: 1400px) {
-                height: 40rem;
-            }
-
             @media (max-width: 992px) {
                 height: 35rem;
             }
@@ -333,11 +363,15 @@
         background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 19%, rgba(228, 240, 255, 1) 56%, rgba(207, 229, 255, 1) 100%);
 
         @media (max-width: 1400px) {
-            padding: 2rem 2rem 2rem 3rem;
+            padding: 4rem 2rem 2rem 3rem;
         }
 
         @media (max-width: 992px) {
             width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            text-align: center;
         }
 
         @media (max-width: 576px) {
@@ -353,7 +387,16 @@
                 display: none;
             }
         }
+        .steps-div{
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
 
+            @media (max-width: 768px) {
+                margin: 0 auto;
+            }
+        }
         .step {
             &:nth-of-type(1) {
                 .number-count {
@@ -365,6 +408,12 @@
             display: flex;
             column-gap: 1rem;
             margin-bottom: 2rem;
+            width: fit-content;
+            text-align: start;
+            @media (max-width: 768px) {
+               justify-content: center;
+            }
+    
 
             @media (max-width: 350px) {
                 flex-direction: column;
@@ -426,6 +475,10 @@
         .info-side {
             width: 65%;
 
+            @media (max-width: 768px) {
+                text-align: center;
+            }
+
             @media (max-width: 1200px) {
                 width: 100%;
             }
@@ -447,20 +500,26 @@
                 left: -17%;
 
                 @media (max-width: 1200px) {
-                    width: 60%;
-                    left: 50%;
-                    top: 0;
-                    transform: translateX(-50%);
+                    // width: 60%;
+                    // left: 50%;
+                    // top: 0;
+                    // transform: translateX(-50%);
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    top: inherit;
+                    left: inherit;
+                    object-fit: contain;
                 }
 
-                @media (max-width: 768px) {
-                    width: 80%;
-                }
+                // @media (max-width: 768px) {
+                //     width: 80%;
+                // }
 
 
-                @media (max-width: 576px) {
-                    width: 90%;
-                }
+                // @media (max-width: 576px) {
+                //     width: 90%;
+                // }
             }
         }
     }
@@ -469,6 +528,10 @@
 // Savings Section
 .savings-section {
     padding: 4rem 0;
+
+    @media (max-width: 1200px) {
+        padding: 0;
+    }
 
     .flex {
         display: flex;
@@ -491,6 +554,10 @@
             width: 100%;
         }
 
+        @media (max-width: 768px) {
+            text-align: center;
+        }
+
         .info-effect {
             position: absolute;
             top: 0;
@@ -501,9 +568,21 @@
             }
         }
 
+        .steps-div{
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @media (max-width: 768px) {
+                margin: 0 auto;
+            }
+        }
+
         .step {
             margin-left: 2rem;
-
+            text-align: start;
+            width: fit-content;
             &:nth-of-type(3) {
                 .icon-div-step {
                     background-color: #30C28C;
@@ -623,6 +702,7 @@
     }
 }
 
+// Form Section
 .form-section {
     .flex {
         display: flex;
@@ -630,6 +710,11 @@
         background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(207, 229, 255, 1) 100%);
         border-radius: 14px;
         border: 2px solid #A8C6E8;
+
+        @media (max-width: 1200px) {
+            flex-direction: column;
+            gap: 1rem;
+        }
 
         .info-div {
             display: flex;
@@ -639,16 +724,13 @@
             flex: 1;
             padding-top: 3rem;
 
-            @media (max-width: 1400px) {
-                padding: 2rem 2rem 2rem 3rem;
-            }
+            // @media (max-width: 1400px) {
+            //     padding: 2rem 2rem 2rem 3rem;
+            // }
 
-            @media (max-width: 992px) {
+            @media (max-width: 1200px) {
                 width: 100%;
-            }
-
-            @media (max-width: 576px) {
-                padding: 2.5rem 0.6rem;
+                padding-bottom: 2rem;
             }
 
             .info-effect {
@@ -661,18 +743,27 @@
                 }
             }
 
-            .steps{
+            .steps {
                 height: 100%;
-                .white-background{
+
+                .white-background {
                     padding-left: 2rem;
                     padding-top: 1rem;
                     // background-color: #ffffff;
-                    height: 82%;
+                    height: 100%;
                     width: 100%;
                     position: relative;
                     z-index: 2;
 
-                    &::after{
+                    @media (max-width: 1200px) {
+                        padding-bottom: 1rem;
+                    }
+
+                    @media (max-width: 576px) {
+                        padding-left: 1rem;
+                    }
+
+                    &::after {
                         position: absolute;
                         width: 101%;
                         height: 101%;
@@ -682,8 +773,10 @@
                         left: -2px;
                         z-index: -2;
                     }
+
                     .step {
                         padding-left: 0rem;
+
                         &:nth-of-type(1) {
                             .number-count {
                                 background-color: #3FD49D;
@@ -697,6 +790,10 @@
             .step {
                 &:nth-of-type(1) {
                     padding-left: 2rem;
+                    @media (max-width: 576px) {
+                        padding-left: 1rem;
+                    }
+
                     .number-count {
                         background-color: #30C28C;
                         border: 4px solid #22B57F;
@@ -746,39 +843,45 @@
             width: 35%;
             padding: 2rem 3rem;
 
+            @media (max-width: 1200px) {
+                width: 100%;
+            }
+
+            @media (max-width: 576px) {
+                padding: 2rem 1rem;
+            }
+
             .title {
                 color: $primary;
                 font-size: 28px;
                 font-weight: bold;
                 margin-bottom: 0.6rem;
                 text-align: center;
+
                 span {
                     font-weight: medium;
                 }
             }
 
-            .sub-title{
+            .sub-title {
                 text-align: center;
                 font-weight: 500;
                 font-size: 16px;
                 margin-bottom: 1rem;
             }
 
-            form{
-                label{
+            form {
+                label {
                     font-weight: bold;
                     font-size: 14px;
                 }
-                input{
-                    background-color: #F4F4F4;
+
+                input {
+                    background-color: #ffffff;
                     height: 46px;
                     padding-left: 1rem;
                     font-size: 14px;
                     font-weight: 500;
-                }
-
-                .last-input input{
-                    background-color: #ffffff;
                 }
             }
         }
