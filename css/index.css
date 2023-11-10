@@ -13731,6 +13731,11 @@ nav .nav-link:hover {
     margin: 0 auto;
   }
 }
+@media (max-width: 768px) {
+  .savings-section .info-side .button-div {
+    margin: 0 auto !important;
+  }
+}
 .savings-section .info-side .step {
   margin-left: 2rem;
   text-align: start;

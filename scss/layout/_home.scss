@@ -571,10 +571,20 @@
             }
         }
 
+        .button-div{
+            @media (max-width: 768px) {
+                margin: 0 auto !important;
+            }
+        }
+
+
         .step {
             margin-left: 2rem;
             text-align: start;
             width: fit-content;
+
+            @media (max-width: 768px) {
+            }
             &:nth-of-type(3) {
                 .icon-div-step {
                     background-color: #30C28C;
