@@ -707,5 +707,5 @@ document.addEventListener("DOMContentLoaded", function () {
     images[currentIndex].style.opacity = 1;
   }
 
-  setInterval(showNextImage, 10000); // Change image every 10 seconds
+  setInterval(showNextImage, 12000); // Change image every 10 seconds
 });

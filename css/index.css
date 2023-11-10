@@ -13328,7 +13328,7 @@ nav .nav-link:hover {
   object-fit: cover;
   z-index: 2;
   opacity: 0;
-  transition: opacity 2s ease-in-out;
+  transition: opacity 1.5s ease-in-out;
 }
 @media (max-width: 1400px) {
   .nav-hero .hero .hero-img-div .hero-img {
