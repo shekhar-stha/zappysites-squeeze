@@ -673,8 +673,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Check if the input is a valid number or contains alphabets
     if (isNaN(inputValue) || inputValue.trim() === '' || containsAnyLetters(inputValue)) {
-      alert('Please enter a valid number for the monthly bill.');
-      console.log(inputValue);
       inputElement.value = inputValue.replace(/[^0-9.]/g, '');
       if (inputElement.value.charAt(0) !== '$') {
         inputElement.value = '$' + inputElement.value;
