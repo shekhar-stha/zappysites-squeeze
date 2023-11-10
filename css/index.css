@@ -13298,16 +13298,6 @@ nav .nav-link:hover {
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.34);
   z-index: 3;
 }
-@media (max-width: 768px) {
-  .nav-hero .hero .info-div .fourth-heading {
-    font-size: 16px;
-  }
-}
-@media (max-width: 576px) {
-  .nav-hero .hero .info-div .fourth-heading {
-    font-size: 15px;
-  }
-}
 .nav-hero .hero .info-div .hero-btns {
   border-bottom: 2px solid rgba(207, 229, 255, 0.2509803922);
 }
@@ -13992,18 +13982,18 @@ nav .nav-link:hover {
 .form-section .flex .form-div .sub-title {
   text-align: center;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 1rem;
 }
 .form-section .flex .form-div form label {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 18px;
 }
 .form-section .flex .form-div form input {
   background-color: #ffffff;
   height: 46px;
   padding-left: 1rem;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
 }
 
